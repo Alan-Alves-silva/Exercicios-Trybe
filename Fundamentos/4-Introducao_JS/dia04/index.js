@@ -1,3 +1,4 @@
+/*
 console.log('Exercícios - objetos e for/in');
 // Usando o objeto abaixo, faça os exercícios a seguir:
 
@@ -14,7 +15,6 @@ console.log('Bem-vinda, ' + info.personagem)
 console.log('------------2ª QUESTÃO---------------')
 info['recorrente'] = 'Sim'
 console.log(info)
-/*
 
 console.log('------------3ª QUESTÃO---------------')
 for(let index in info) {
@@ -25,7 +25,7 @@ console.log('------------4ª QUESTÃO---------------')
 for(let i in info) {
   console.log(info[i])
 }
-*/
+
 console.log('------------5ª QUESTÃO---------------')
 let info2 = {
   personagem: 'Tio Patinhas',
@@ -82,3 +82,46 @@ console.log('-----------8ª QUESTÃO---------------')
 
 console.log(`${leitor.nome} tem ${leitor.livrosFavoritos.length} livros`)
 console.log(`${leitor['nome']} tem ${leitor['livrosFavoritos'].length} livros`)
+
+
+console.log('Exercícios - Funções');
+console.log('------------1ª QUESTÃO---------------')
+
+function palindromo(string) {
+  let inverted = string.split('').reverse().join('');
+  if(string == inverted){
+    return `É palindromo!!!! Palavra/Frase Original: ${string}, reverse: ${verificar}`
+  }else {
+    return 'Não é palindromo';
+  }
+
+}
+palindromo('reviver')
+*/
+
+console.log('------------2ª QUESTÃO---------------')
+
+function indexMaxValue(array) {
+  let maiorValor = Math.max(...array)
+  return array.indexOf(maiorValor)
+}
+
+console.log('------------3ª QUESTÃO---------------')
+
+function indexMinValue(array) {
+  let menorValor = Math.min(...array)
+  return array.indexOf(menorValor)
+}
+
+console.log('------------3ª QUESTÃO---------------')
+
+let teste = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+let newArray = 0;
+let maiorNome = ''
+for(let index of teste){
+  if(index.length > newArray) {
+    newArray = index.length
+    maiorNome = index
+  }
+}
+console.log(newArray, maiorNome);
