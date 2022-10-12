@@ -1,4 +1,3 @@
-/*
 console.log('Exercícios - objetos e for/in');
 // Usando o objeto abaixo, faça os exercícios a seguir:
 
@@ -97,7 +96,7 @@ function palindromo(string) {
 
 }
 palindromo('reviver')
-*/
+
 
 console.log('------------2ª QUESTÃO---------------')
 
@@ -113,15 +112,38 @@ function indexMinValue(array) {
   return array.indexOf(menorValor)
 }
 
-console.log('------------3ª QUESTÃO---------------')
+console.log('------------4ª QUESTÃO---------------')
 
-let teste = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
-let newArray = 0;
-let maiorNome = ''
-for(let index of teste){
-  if(index.length > newArray) {
-    newArray = index.length
-    maiorNome = index
+function maiorNome(params) {
+  let contador = 0;
+  let maiorNome = ''
+  for(let index of params){
+    if(index.length > contador) {
+      contador = index.length
+      maiorNome = index
+    }
   }
+  return maiorNome;
 }
-console.log(newArray, maiorNome);
+
+console.log('------------5ª QUESTÃO---------------')
+function maiorNumeroRepetido(params) {
+  let contador = 0;
+  let num = 0;
+  let benditoNumero = null;
+  for(let index1 = 0; index1 < params.  length; index1 ++) {
+    for(let index2 = 1; index2 < params.length; index2 ++) {
+      if(params[index1] == params[index2]) {
+        contador += 1;
+      }
+    }
+    if(contador > num) {
+      num = contador;
+      benditoNumero = params[index1]
+    }
+  }
+  return benditoNumero;
+  
+}
+let teste = [2, 3, 2, 5, 8, 2, 3];
+console.log(maiorNumeroRepetido(teste))
