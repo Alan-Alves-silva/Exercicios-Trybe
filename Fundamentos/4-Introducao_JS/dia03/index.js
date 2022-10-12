@@ -76,10 +76,10 @@ console.log('---Exercícios - bônus----')
 console.log('--------4ª QUESTÃO-------')
 //Escreva um programa que, dado um valor n qualquer, seja n > 1,
 //imprima na tela um quadrado feito de asteriscos de lado de tamanho n.
-let n = 10
+let num = 10
 let b = '*';
-for(let index = 1; index <= n; index ++) {
-  console.log(b.repeat(n))
+for(let index = 1; index <= num; index ++) {
+  console.log(b.repeat(num))
 }
 
 //Faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base.
